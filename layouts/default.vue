@@ -23,7 +23,7 @@
         <span class="font-bold text-xl ml-1">Copy</span>
       </button>
     </header>
-    <figure class="absolute w-full h-full z-0">
+    <figure class="absolute w-full h-full -z-10">
       <nuxt-img
         src="/image/inou_top.png"
         class="w-full h-full object-cover"
@@ -52,3 +52,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+.-z-10 {
+  z-index: -10;
+}
+</style>

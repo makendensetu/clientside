@@ -1,6 +1,9 @@
 <template>
-  <nuxt-link to="/imagetrandition" class="btn text-xl md:text-3xl px-4 md:px-6 py-16 md:py-24">
-    <span>使ってみる</span></nuxt-link
+  <nuxt-link
+    to="/imagetrandition"
+    class="btn text-xl md:text-3xl px-4 md:px-6 py-16 md:py-24"
+  >
+    <span>現在地を共有する</span></nuxt-link
   >
 </template>
 

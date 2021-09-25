@@ -1,18 +1,7 @@
 <template>
   <div>
-    <h2
-      class="
-        text-center text-3xl
-        font-mono
-        mx-auto
-        max-w-screen-md max-h-64
-        pt-1
-        pb-1
-        z-10
-        relative
-      "
-    >
-      写真をアップロードしてください！
+    <h2 class="text-center text-3xl font-mono mx-auto relative">
+      付近の建物の画像を選択してください
     </h2>
     <div class="bg-white border border-dashed border-gray-500 relative">
       <input
@@ -24,10 +13,10 @@
       />
       <div class="text-center p-10 absolute top-0 right-0 left-0 m-auto">
         <h4>
-          Drop files anywhere to upload
-          <br />or
+          画像をドロップする
+          <br />または
         </h4>
-        <p class="">Select Files</p>
+        <p class="">共有リンクを生成</p>
       </div>
     </div>
     <div class="m-3 flex items-center justify-center">
@@ -38,7 +27,9 @@
           font-mono
           rounded
           border-b-2 border-green-500
-          hover:border-green-600 hover:bg-green-500 hover:text-white
+          hover:border-green-600
+          hover:bg-green-500
+          hover:text-white
           shadow-md
           py-2
           px-6
@@ -47,7 +38,7 @@
         "
         @click="onclick"
       >
-        <span class="mr-2">送信</span>
+        <span class="mr-2">共有リンクを取得</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -65,32 +56,12 @@
 </template>
 <script>
 export default {
-  data() {
-    return { datacloud: '' }
-  },
   methods: {
     onchange() {
       // アップロードファイルを用意
-      const fl = this.$refs.upfile.files[0]
-      const data = new FormData()
-      data.append('upfile', fl, fl.name)
-      this.datacloud = data
-      // eslint-disable-next-line no-unused-expressions
-    },
-    onclick() {
-      fetch('', {
-        method: 'POST',
-        body: this.data,
-      })
-        .then(function (response) {
-          return response.text()
-        })
-        .then(function (text) {
-          this.message = text
-        })
-        .catch(function (error) {
-          window.alert('Error:' + error.message)
-        })
+      const file = this.$refs.upfile.files[0]
+      //   const data = new FormData()
+      console.log(file)
     },
   },
 }
