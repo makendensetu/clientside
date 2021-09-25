@@ -1,7 +1,7 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="feather feather-github fill-current hover:text-green-500"
+    class="feather feather-github"
     viewBox="0 0 512 512"
   >
     <title>Logo Twitter</title>

@@ -10,7 +10,13 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
+  build: {
+    extend(config, ctx) {
+      config.node = {
+        fs: 'empty',
+      }
+    },
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -50,5 +56,4 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
 }

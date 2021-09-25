@@ -3,13 +3,13 @@
     <header class="fixed z-50 m-2 flex">
       <a
         href="https://github.com/makendensetu"
-        class="m-1 mx-2 flex justify-start hover:text-green-400 share-btn"
+        class="m-1 mx-2 flex justify-center hover:text-green-400 share-btn"
       >
-        <IconsGithub class="h-8 w-8" />
-        <span class="font-bold text-xl ml-1">Github</span>
+        <IconsGithub class="h-8 w-8 mix-blend-color-dodge" />
+        <span class="font-bold text-xl ml-1 mix-blend-difference">Github</span>
       </a>
       <button
-        class="m-1 mx-2 flex justify-center hover:text-blue-400 share-btn"
+        class="m-1 mx-2 flex justify-center fill-current hover:text-blue-400"
         @click="tweet"
       >
         <IconsTwitter class="h-8 w-8" />
