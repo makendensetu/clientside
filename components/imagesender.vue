@@ -8,19 +8,22 @@
         ref="upfile"
         type="file"
         multiple
-        class="cursor-pointer relative block opacity-0 w-4/5 h-full p-20 z-50"
+        class="cursor-pointer relative block opacity-0 w-4/5 h-full p-10 z-50"
         @change="onchange"
       />
-      <div class="text-center p-10 absolute top-0 right-0 left-0 m-auto">
+
+      <div class="text-center p-5 absolute top-0 right-0 left-0 m-auto">
         <h4>
           画像をドロップする
           <br />または
         </h4>
-        <p class="">共有リンクを生成</p>
+        <p class="">画像を選択</p>
       </div>
     </div>
+    <div v-if="file">{{ file.name }}</div>
     <div class="m-3 flex items-center justify-center">
       <button
+        v-if="!uploading"
         class="
           bg-white
           text-gray-800
@@ -36,7 +39,7 @@
           inline-flex
           items-center
         "
-        @click="onclick"
+        @click="submit"
       >
         <span class="mr-2">共有リンクを取得</span>
         <svg
@@ -51,17 +54,61 @@
           ></path>
         </svg>
       </button>
+      <div v-if="uploading && !url">共有リンク取得中....</div>
+
+      <div
+        v-if="url"
+        class="flex justify-center bg-white rounded-lg border-2 p-2"
+      >
+        <div class="text-lg text-bold p-1">
+          共有リンク: <a :href="url">{{ url }}</a>
+        </div>
+        <button @click="copy">
+          <IconsCopy class="h-8 w-8 m-1 hover:text-blue-600" />
+        </button>
+      </div>
     </div>
   </div>
 </template>
 <script>
 export default {
+  data: () => ({ file: null, uploading: false, url: '' }),
   methods: {
     onchange() {
-      // アップロードファイルを用意
       const file = this.$refs.upfile.files[0]
-      //   const data = new FormData()
-      console.log(file)
+      if (file) {
+        this.file = file
+      }
+    },
+    async submit() {
+      if (!this.file) return
+      try {
+        this.uploading = true
+        const data = new FormData()
+        data.set('image', this.file)
+        const pos = await new Promise((resolve) => {
+          navigator.geolocation.getCurrentPosition(resolve)
+        })
+        const { latitude, longitude } = pos.coords
+        data.set('lat', latitude)
+        data.set('lon', longitude)
+
+        const apiUrl = `http://localhost:4000/post`
+        const res = await this.$axios.$post(apiUrl, data, {
+          headers: {
+            'content-type': 'multipart/form-data',
+          },
+        })
+        this.url = `${location.origin}/root?id=${res.id}`
+      } catch (e) {
+        this.uploading = false
+        console.error(e)
+      }
+    },
+    copy() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(this.url)
+      }
     },
   },
 }
