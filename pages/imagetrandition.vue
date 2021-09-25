@@ -1,9 +1,20 @@
 <template>
   <div>
     <div>
+      <nuxt-img
+        class="
+          absolute
+          top-1/4
+          left-1/2
+          transform
+          -translate-x-1/2 -translate-y-1/2
+          scale-125
+        "
+        src="/image/mini_ver.png"
+      ></nuxt-img>
       <imagesender
         class="
-          top-1/3
+          top-2/3
           left-1/2
           transform
           -translate-x-1/2 -translate-y-1/2
