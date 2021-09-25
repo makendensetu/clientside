@@ -2,10 +2,10 @@
  <figure>
     <nuxt-img
         src="/image/inou_top.png"
-        class="w-full h-full object-cover"
+        class="fixed w-full h-full object-cover"
       ></nuxt-img>
+      <imagesender class="mx-auto max-w-screen-md max-h-64 p-6 z-10 relative frop-shadow"/>
     <div class="relative cut h-screen">
-      <imagesender class="absolute top-10"/>
       <figcaption class="absolute bottom-0 bg-black text-white p-1">
         背景の出典：<cite
           >古地図コレクション https://kochizu.gsi.go.jp/inouzu</cite
