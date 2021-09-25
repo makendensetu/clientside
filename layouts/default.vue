@@ -20,7 +20,7 @@
         @click="copy"
       >
         <IconsCopy class="h-8 w-8" />
-        <span class="font-bold text-xl ml-1">Copy</span>
+        <span class="font-bold text-xl ml-1">CopyLink</span>
       </button>
     </header>
     <figure class="absolute w-full h-full -z-10">

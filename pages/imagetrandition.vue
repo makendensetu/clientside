@@ -2,7 +2,7 @@
   <div>
     <nuxt-img
       src="/image/logo_noBg.webp"
-      class="z-20 relative p-16 max-w-xl mx-auto"
+      class="z-20 relative p-3 md:p-16 w-2/3 max-w-xl mx-auto"
     ></nuxt-img>
     <imagesender
       class="
