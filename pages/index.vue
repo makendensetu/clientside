@@ -23,7 +23,7 @@
       "
     >
       <nuxt-img src="/image/logo_noBg.webp"></nuxt-img>
-      <div class="text-center pt-64">
+      <div class="text-center pt-32">
         <BtnTypeB />
       </div>
     </div>
