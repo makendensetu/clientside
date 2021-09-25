@@ -12,7 +12,7 @@ export default {
     const { id } = this.$route.query
     if (!id) return this.$router.push('/')
 
-    const apiUrl = `http://localhost:4000/post?id=${id}`
+    const apiUrl = `https://api.inarimc.ml/post?id=${id}`
     const { lon, lat } = await this.$axios.$get(apiUrl)
     mapboxgl.accessToken =
       'pk.eyJ1IjoiaW5hcmlkaXkiLCJhIjoiY2t0emF1ZXRuMDYwcDJucXJpamgycTE3bSJ9.CqEbQXJ_yiRdUa2qFYJRnw'
@@ -35,7 +35,7 @@ export default {
       .setLngLat([lon, lat])
       .setPopup(
         new mapboxgl.Popup({ offset: 25 }) // add popups
-          .setHTML(`<img src="http://localhost:4000/images/${id}.png">`)
+          .setHTML(`<img src="https://api.inarimc.ml/images/${id}.png">`)
       )
       .addTo(map)
 

@@ -93,7 +93,7 @@ export default {
         data.set('lat', latitude)
         data.set('lon', longitude)
 
-        const apiUrl = `http://localhost:4000/post`
+        const apiUrl = `https://api.inarimc.ml/post`
         const res = await this.$axios.$post(apiUrl, data, {
           headers: {
             'content-type': 'multipart/form-data',

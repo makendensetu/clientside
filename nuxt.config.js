@@ -1,15 +1,42 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+
   head: {
-    title: 'clientSide',
+    htmlAttrs: {
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#',
+    },
+    titleTemplate: '%s - ' + 'はい地～図',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: '写真と地図を簡単に友達に送るアプリ',
+      },
+
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'はい地～図',
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://inarimc.ml' },
+      { hid: 'og:title', property: 'og:title', content: 'はい地～図' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: '写真と地図を簡単に友達に送るアプリ',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://inarimc.ml/image/logo_bikkuri.jpg',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+
   build: {
     extend(config, ctx) {
       config.node = {
