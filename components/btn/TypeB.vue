@@ -31,8 +31,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 150%;
-  height: 350%;
+  width: 100%;
+  height: 400%;
   content: '';
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;

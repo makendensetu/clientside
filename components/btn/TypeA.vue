@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/about" class="btn">説明に戻る</nuxt-link>
+  <nuxt-link to="/" class="btn">ホームに戻る</nuxt-link>
 </template>
 <style scoped>
 .btn {

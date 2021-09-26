@@ -23,7 +23,7 @@
         <span class="font-bold text-xl ml-1">CopyLink</span>
       </button>
     </header>
-    <figure class="absolute w-full h-full -z-10">
+    <figure class="fixed w-full h-full -z-10">
       <nuxt-img
         src="/image/inou_top.png"
         class="w-full h-full object-cover"
@@ -33,7 +33,7 @@
         <cite>古地図コレクション https://kochizu.gsi.go.jp/inouzu</cite>
       </figcaption>
     </figure>
-    <nuxt />
+    <nuxt class="py-16" />
   </div>
 </template>
 <script>

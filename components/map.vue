@@ -18,7 +18,7 @@ export default {
       'pk.eyJ1IjoiaW5hcmlkaXkiLCJhIjoiY2t0emF1ZXRuMDYwcDJucXJpamgycTE3bSJ9.CqEbQXJ_yiRdUa2qFYJRnw'
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/inaridiy/cktzca3fp0oxg17qofnmpia4f',
+      style: 'mapbox://styles/inaridiy/cku0ksqcb2z8q17n18n83sknh',
       center: [lon, lat],
       zoom: 15,
     })
