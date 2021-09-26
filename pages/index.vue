@@ -6,6 +6,7 @@
     </div>
     <div class="text-center pt-24">
       <BtnTypeB />
+      <BtnTypeC />
     </div>
   </div>
 </template>

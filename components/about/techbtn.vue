@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/tech" class="btn">仕様技術一覧へ</nuxt-link>
+  <nuxt-link to="/tech" class="btn">使用技術一覧へ</nuxt-link>
 </template>
 <style scoped>
 .btn {

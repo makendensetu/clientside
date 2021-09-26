@@ -119,7 +119,7 @@
         <h1 class="font-bold text-2xl mt-4">ぴねたいる</h1>
         <p class="font-semibold text-xl text-gray-500">バックエンド担当</p>
         <p class="text-center mt-4">
-          元気いっぱいの中学三年生。今回はバックエンドを担当。
+          最近javascriptを頑張り始めた、数学や科学全般が好きな中学三年生です。
         </p>
       </div>
       <div class="flex flex-row space-x-4 mt-11">

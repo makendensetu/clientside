@@ -1,9 +1,9 @@
 <template>
   <nuxt-link
-    to="/imagetrandition"
+    to="/about"
     class="btn text-xl md:text-3xl px-4 md:px-6 py-16 md:py-24"
   >
-    <span>現在地を共有する</span></nuxt-link
+    <span>説明</span></nuxt-link
   >
 </template>
 
@@ -20,7 +20,7 @@
   padding: 1.5rem 6rem;
   color: #fff;
   border-radius: 0;
-  background: #1f2041;
+  background: #a54a00;
 }
 
 .btn span {
@@ -38,7 +38,7 @@
   transition: all 0.5s ease-in-out;
   -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
   transform: translateX(-98%) translateY(-25%) rotate(45deg);
-  background: #19647e;
+  background: #b65200;
 }
 
 .btn:hover::before {
